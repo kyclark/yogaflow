@@ -1,5 +1,5 @@
 import io
-from flow import pairs, read_training
+from yogaflow import pairs, read_training
 
 
 # --------------------------------------------------
