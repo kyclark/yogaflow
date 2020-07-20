@@ -6,6 +6,7 @@ import random
 from collections import defaultdict
 from typing import Any, NamedTuple, List, TextIO, Dict, Tuple, TypeVar
 
+
 class Args(NamedTuple):
     file: List[TextIO]
     max_poses: int
@@ -93,11 +94,7 @@ def read_training(fhs: List[TextIO]) -> Dict[str, List[str]]:
 def pairs(xs: List[Any]) -> List[Tuple[(Any, Any)]]:
     """ Create a list of pair/tuples from a list """
 
-    pairs = []
-    for i in range(0, len(xs) - 1):
-        pairs.append((xs[i], xs[i + 1]))
-
-    return pairs
+    return [(xs[i], xs[i + 1]) for i in range(0, len(xs) - 1)]
 
 
 # --------------------------------------------------
